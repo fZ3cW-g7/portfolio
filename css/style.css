@@ -1,0 +1,88 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: sans-serif; */
+  color: #333;
+  background-image: url(../img/bg-grid-lightblue.png);
+}
+img {
+  width: 100px;
+  vertical-align: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* 共通 */
+p {
+  font-size: 15px;
+}
+
+/* contact */
+section.contact form {
+  width: 60%;
+  margin: 0 auto;
+}
+section.contact form p {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 13px;
+}
+section.contact form p label {
+  margin-bottom: 8px;
+}
+section.conact form input {
+  height: 6vh;
+}
+section.contact form textarea {
+  margin-bottom: 40px;
+  resize: none;
+}
+section.contact form input,
+section.contact form textarea {
+  width: 100%;
+  padding: 13px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+section.contact form input[type="submit"] {
+  width: 30%;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 20px;
+  display: block;
+  cursor: pointer;
+  color: #fff;
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 100vh;
+}
+section.contact form label.required::after {
+  content: "必須";
+  margin-left: 10px;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  background-color: rgba(255, 68, 0, 0.8);
+  border-radius: 100vh;
+  display: inline-flex;
+  place-items: center;
+  vertical-align: middle;
+}
