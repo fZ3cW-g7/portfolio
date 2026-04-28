@@ -8,6 +8,15 @@ body {
   /* font-family: sans-serif; */
   color: #333;
   background-image: url(../img/bg-grid-lightblue.png);
+  background-size: 15px;
+}
+.bg-wrap {
+  width: 85vw;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
 }
 img {
   width: 100px;
@@ -24,6 +33,12 @@ h2,
 h3 {
   line-height: 1;
 }
+@media (width>767px) {
+  .bg-wrap {
+    margin: 80px auto;
+    padding: 30px 40px;
+  }
+}
 
 /* 共通 */
 p {
@@ -32,7 +47,9 @@ p {
 
 /* contact */
 section.contact form {
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin: 0 auto;
 }
 section.contact form p {
@@ -40,16 +57,16 @@ section.contact form p {
   flex-direction: column;
   /* justify-content: space-between; */
   /* align-items: center; */
-  padding: 13px;
+  gap: 8px;
 }
 section.contact form p label {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 section.conact form input {
   height: 6vh;
 }
 section.contact form textarea {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   resize: none;
 }
 section.contact form input,
@@ -61,14 +78,15 @@ section.contact form textarea {
   border-radius: 3px;
 }
 section.contact form input[type="submit"] {
-  width: 30%;
+  width: 90%;
   line-height: 1;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px;
   display: block;
   cursor: pointer;
   color: #fff;
   background-color: dodgerblue;
+  /* background-color: deeppink; */
   border: none;
   border-radius: 100vh;
 }
@@ -85,4 +103,13 @@ section.contact form label.required::after {
   display: inline-flex;
   place-items: center;
   vertical-align: middle;
+}
+@media (width>767px) {
+  section.contact form {
+    width: 60%;
+  }
+  section.contact form input[type="submit"] {
+    width: 30%;
+    padding: 20px;
+  }
 }
