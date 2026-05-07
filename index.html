@@ -4,17 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Coral+Pixels&family=DotGothic16&family=Jersey+10&family=Kiwi+Maru&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <title>portfolio</title>
   </head>
   <body>
     <header>
-      <h1>ヘッダーのh1</h1>
-      <nav class="global-nav"></nav>
+      <h1>
+        <a href="index.html">
+          <img src="img/svg/logo-yellow-stroke.svg" alt="logo" />
+        </a>
+      </h1>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="">項目1</a></li>
+          <li><a href="">項目2</a></li>
+          <li><a href="">項目3</a></li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <h1 class="main-visual">
+        <img src="img/svg/logo-black-stroke.svg" alt="logo" />
+      </h1>
+      <section class="works">
+        <h2 class="section-title">works</h2>
+        <ul class="works-list">
+          <li>
+            <a href="">あああああああああ</a>
+          </li>
+          <li><a href="">２</a></li>
+          <li><a href="">３</a></li>
+        </ul>
+        <a href="" class="more-btn">もっとみる</a>
+      </section>
 
-    <div class="bg-wrap">
-      <main>
-        <section class="works">
+      <!-- <section class="works">
           <h2 class="section-title"></h2>
         </section>
         <section class="profile">
@@ -22,9 +51,10 @@
         </section>
         <section class="favourites">
           <h2 class="section-title"></h2>
-        </section>
-        <section class="contact">
-          <h2 class="section-title">お問い合わせ</h2>
+        </section> -->
+      <section class="contact">
+        <h2 class="section-title">contact</h2>
+        <div class="bg-wrap">
           <form action="" method="post">
             <p>
               <label for="name" class="required">お名前</label>
@@ -52,9 +82,11 @@
             </p>
             <input type="submit" value="送信する" />
           </form>
-        </section>
-      </main>
-      <footer></footer>
-    </div>
+        </div>
+      </section>
+    </main>
+    <footer>フッター</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
