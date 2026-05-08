@@ -3,8 +3,6 @@ const header = $("header");
 $(function () {
   //スクロール時
   $(function () {
-    console.log("あああああああああ");
-
     // // toTop押下時
     // let clickedToTop = false; // 自動スクロール中か
     // $(".to-top-btn").click(function () {
@@ -66,4 +64,28 @@ $(function () {
     // ページtop以外での更新時にも適用
     checkScroll();
   });
+});
+
+// ページ内リンクスムーススクロール
+$('a[href^="#"]').on("click", function (e) {
+  const speed = 600;
+  const href = $(this).attr("href");
+  const target = $(href == "#" || href == "" ? "html" : href);
+  if (target.length) {
+    // header分高さ調整
+    const headerHeight = $("header").outerHeight();
+    let position = target.offset().top - headerHeight - 15; //15pxはheaderのtop移動分
+    // // 特定のIDだった場合のみさらに余白を引く
+    // let scrollMargin = 50; //sp #food,#life用
+    // if (target.is("#food, #life")) {
+    //   if (window.matchMedia("(width>767px)").matches) {
+    //     scrollMargin = 150; // pc
+    //   }
+    // } else if (target.is("#culture")) {
+    //   scrollMargin = 10; // sp,pc共通
+    // }
+    // position = position - scrollMargin;
+    $("body,html").stop().animate({ scrollTop: position }, speed, "swing");
+    return false;
+  }
 });
