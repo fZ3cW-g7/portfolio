@@ -89,3 +89,41 @@ $('a[href^="#"]').on("click", function (e) {
     return false;
   }
 });
+
+if (document.body.id === "work-detail") {
+  // 1. 作品のデータベース（本来は別ファイルやAPIから取得するイメージです）
+  const projectData = {
+    // 写真、タイトル、種別、使用スキル、製作期間、実際の作品ページ、詳細
+    "sns-app": {
+      title: "写真共有SNSアプリ",
+      category: "Webアプリケーション / React, Firebase",
+      description:
+        "日常の1コマを気軽にシェアできるモビリティファーストのSNSです。リアルタイムチャット機能を搭載しています。",
+    },
+    "portfolio-site": {
+      title: "デザイン事務所のコーポレートサイト",
+      category: "Webサイト / HTML, CSS, JavaScript",
+      description:
+        "視覚的な美しさとアクセシビリティを両立させた、モダンなWebサイトです。アニメーションにこだわりました。",
+    },
+  };
+
+  // 2. URLからクエリパラメータ（?id=xxx）を取得する
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectId = urlParams.get("id"); // 'sns-app' などが取れる
+  console.log(projectId);
+
+  // 3. 該当するデータを画面に反映する
+  const project = projectData[projectId];
+
+  if (project) {
+    document.getElementById("project-title").textContent = project.title;
+    document.getElementById("project-category").textContent = project.category;
+    document.getElementById("project-description").textContent =
+      project.description;
+  } else {
+    // パラメータが不正、または作品が見つからない場合
+    document.getElementById("project-container").innerHTML =
+      "<h1>作品が見つかりませんでした。</h1><p>URLを確認してください。</p>";
+  }
+}
