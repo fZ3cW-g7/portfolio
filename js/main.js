@@ -101,7 +101,7 @@ if (document.body.classList.contains("work-detail")) {
       period: "約60時間",
       description:
         "架空の町「弥石町」町おこしサイトの依頼書に基づいて、初めてデザインから作成したWEBサイト。年齢層を絞らないシンプルめなデザインを意識。横スクロールリストやjsによるスクロール関連の制御等を自力で実装出来た。",
-      url: "biseki",
+      url: "biseki/index.html",
       imgSrcMain: "img/work-biseki-pc.png",
       imgSrcSP: "img/work-biseki-sp.png",
     },
@@ -112,7 +112,7 @@ if (document.body.classList.contains("work-detail")) {
       period: "約36時間",
       description:
         "創業70周年になる架空のアメリカンダイナーのWEBサイト。個人的な好みを盛り込みつつ、レトロな名残がある現代的なポップさを感じられるデザインを意識。言語切替機能、PDF表示の実装、またidによって表示切替できるメニュー商品詳細ページ実装の挑戦を行った。",
-      url: "diner",
+      url: "diner/index.html",
       imgSrcMain: "img/work-diner-pc.png",
       imgSrcSP: "img/work-diner-sp.png",
     },
@@ -134,7 +134,7 @@ if (document.body.classList.contains("work-detail")) {
       period: "約20時間",
       description:
         "クラスメイトがデザインした、アーティスト非公式LPファンサイトのコーディング部分を担当。お心当たりのあるアーティスト様へ：今回の最終課題発表のために作成したため、もちろん本物のポートフォリオからは除去するのでご安心ください。",
-      url: "ogura",
+      url: "ogura/index.html",
       imgSrcMain: "img/work-ogura-pc.png",
       imgSrcSP: "img/work-ogura-sp.png",
     },

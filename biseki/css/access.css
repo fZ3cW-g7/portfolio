@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* 共通 */
+.is-under .section-title {
+  width: min(100%, 1000px);
+  margin: 0 auto 3vh;
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #1a4472;
+  border-radius: 10px;
+  position: relative;
+}
+.is-under .section-title::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+}
+table {
+  width: min(96%, 900px);
+  margin: 0 auto 2vh;
+  border-collapse: collapse;
+}
+table thead {
+  background-color: #1a457260;
+}
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid #1a447230;
+}
+p.table-memo {
+  width: min(96%, 900px);
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1;
+}
+p.table-memo::before {
+  content: "※";
+}
+@media (width>767px) {
+  .is-under .section-title {
+    margin: 0 auto 7vh;
+    padding: 10px 25px;
+  }
+  .is-under .section-title::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    right: 25px;
+  }
+  table {
+    margin: 0 auto 3vh;
+  }
+  table th,
+  table td {
+    padding: 15px;
+    border: 2px solid #1a447230;
+  }
+  p.table-memo {
+    font-size: 15px;
+  }
+}
+
+/* from-city */
+.from-city .section-title::before {
+  background: url(../img/SVG/icon-hokkaido-ccc.svg) no-repeat center / contain;
+}
+
+/* from-airport */
+.from-airport .section-title::before {
+  background: url(../img/SVG/icon-plane-ccc.svg) no-repeat center / contain;
+}
+
+/* 地図 */
+.map-container {
+  width: min(96%, 900px);
+  margin: 0 auto 2vh;
+  height: auto;
+  padding-top: 56.25%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-container .map-label {
+  display: block;
+  width: 200px;
+  height: 68px;
+  padding: 13px 15px;
+  font-family: sans-serif;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #fff;
+}
+.map-container .map-label p.town-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+.map-container .map-label p.address {
+  font-size: 12px;
+}
+.map .info {
+  width: min(96%, 900px);
+  margin: 0 auto;
+}
+.map .info .info-title {
+  font-weight: bold;
+}
+@media (width<592px) {
+  .map-container .map-label {
+    display: none;
+  }
+}
+@media (width>767px) {
+  .map-container {
+    margin: 0 auto 3vh;
+  }
+}

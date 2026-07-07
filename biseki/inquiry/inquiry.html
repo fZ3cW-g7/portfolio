@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/inquiry.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="" />
+    <title>ご意見・お問い合わせ｜【公式】弥石町観光ガイド きてみて弥石町</title>
+  </head>
+  <body class="is-under">
+    <header>
+      <div class="header-logo">
+        <a href="../index.html"><img src="../img/logo1.png" alt="弥石町" /></a>
+      </div>
+      <div class="sp-nav">
+        <div class="burger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="nav-overlay"></div>
+      <nav class="global-nav">
+        <p class="nav-title">きてみて弥石町</p>
+        <ul class="theme-list">
+          <li>
+            <span class="theme-list-title">弥石町の魅力</span>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../theme/culture.html" class="drop-menu-item"
+                  >触れる</a
+                >
+              </li>
+              <li>
+                <a href="../theme/food.html" class="drop-menu-item">味わう</a>
+              </li>
+              <li>
+                <a href="../theme/life.html" class="drop-menu-item">暮らす</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li><a href="../activities/activities.html">観光・体験</a></li>
+          <li><a href="../access/access.html">アクセス</a></li>
+        </ul>
+        <div class="info">
+          <p class="company-name">弥石町役場観光部</p>
+          <p>〒000-0000<br />北海道弥石郡弥石町一丁目1-1</p>
+          <p class="tel"><a href="tel:000-1234-5678">TEL: 000-1234-5678</a></p>
+          <a href="../inquiry/inquiry.html" class="nav-inquiry-btn"
+            >お問い合わせはこちら</a
+          >
+        </div>
+        <div class="language-btn">
+          <picture class="pic-default">
+            <source srcset="../img/SVG/globe-eee.svg" media="(width>767px)" />
+            <img src="../img/SVG/globe.svg" alt="標準言語設定アイコン" />
+          </picture>
+          <picture class="pic-scrolled">
+            <img
+              src="../img/SVG/globe-1a4472.svg"
+              alt="スクロール時言語設定アイコン"
+            />
+          </picture>
+          <p>LANGUAGE</p>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumbs">
+        <ol>
+          <li><a href="../index.html">ホーム</a></li>
+          <li>お問い合わせ</li>
+        </ol>
+      </div>
+      <div class="wrap">
+        <div class="title-box">
+          <h1>ご意見・お問い合わせ</h1>
+          <p>
+            弥石町の観光に関するご質問・ご相談は、お電話またはメールフォームよりお気軽にご連絡ください。
+          </p>
+        </div>
+        <section class="contact-tel">
+          <h2>お電話でのお問い合わせ</h2>
+          <div class="tel-item">
+            <p class="tel-to">弥石町役場観光部</p>
+            <a href="tel:00012345678" class="tel-number">000-1234-5678</a>
+            <p class="tel-info">
+              【受付時間】9:00 ~ 17:00<br />
+              土・日・祝日・年末年始除く
+            </p>
+          </div>
+        </section>
+        <section class="contact-form">
+          <div class="form-memo">
+            <h2>メールフォームでのお問い合わせ</h2>
+            <p>
+              下記項目にご入力いただき、「内容を確認して送信する」ボタンを押してください。<br />
+              お問い合わせフォーム送信後、自動で受付メールを送信いたします。
+            </p>
+          </div>
+          <form action="#" method="post">
+            <p class="form-title">お問い合わせ内容</p>
+            <div class="form-inner">
+              <div class="form-item radio">
+                <p class="radio-title required">お問い合わせ種別</p>
+                <div class="radio-btns">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="immigration"
+                    value="1"
+                    required
+                  />
+                  <label class="radio-label" for="immigration"
+                    >弥石町移住支援について
+                  </label>
+                  <input type="radio" name="type" id="facilities" value="2" />
+                  <label class="radio-label" for="facilities">
+                    弥石町施設・販売店について
+                  </label>
+                  <input type="radio" name="type" id="else" value="3" />
+                  <label class="radio-label" for="else">
+                    その他弥石町について
+                  </label>
+                </div>
+              </div>
+              <div class="form-item">
+                <label for="name" class="required">お名前</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="弥石 太郎"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <label for="email" class="required">メールアドレス</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="example@example.jp"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <label for="message" class="required">お問い合わせ内容</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">内容を確認して送信</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-logo">
+          <a href="../index.html"
+            ><img src="../img/logo1-white.png" alt="弥石町ロゴ"
+          /></a>
+          <p class="footer-title">きてみて弥石町</p>
+        </div>
+        <nav class="footer-nav">
+          <ul class="theme-list">
+            <li>
+              <span class="theme-list-title">弥石町の魅力</span>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../theme/culture.html" class="drop-menu-item"
+                    >触れる</a
+                  >
+                </li>
+                <li>
+                  <a href="../theme/food.html" class="drop-menu-item">味わう</a>
+                </li>
+                <li>
+                  <a href="../theme/life.html" class="drop-menu-item">暮らす</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav-list">
+            <li><a href="../activities/activities.html">観光・体験</a></li>
+            <li><a href="../access/access.html">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="info">
+          <p class="company-name">弥石町役場観光部</p>
+          <p>〒000-0000<br />北海道弥石郡弥石町一丁目1-1</p>
+          <p class="tel"><a href="tel:000-1234-5678">TEL: 000-1234-5678</a></p>
+          <a href="#" class="nav-inquiry-btn">お問い合わせはこちら</a>
+        </div>
+        <p class="copy">
+          <small>&copy; 2026 きてみて弥石町 All Rights Reserved.</small>
+        </p>
+      </div>
+    </footer>
+
+    <!-- 問い合わせボタン -->
+    <a href="../inquiry/inquiry.html" class="fixed-inquiry-btn">
+      <div class="icon">
+        <img src="../img/SVG/inquiry.svg" alt="お問い合わせアイコン" />
+      </div>
+      <p>お問い合わせ</p>
+    </a>
+    <!-- top戻るボタン -->
+    <a href="#top" class="to-top-btn">
+      <img src="../img/logo-icon-orange.png" alt="TOPへ戻るボタンアイコン" />
+      <p>TOP</p>
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>

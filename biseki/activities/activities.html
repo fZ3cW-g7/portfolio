@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/activities.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="" />
+    <title>観光・体験一覧｜【公式】弥石町観光ガイド きてみて弥石町</title>
+  </head>
+  <body class="is-under activities">
+    <header>
+      <div class="header-logo">
+        <a href="../index.html"><img src="../img/logo1.png" alt="弥石町" /></a>
+      </div>
+      <div class="sp-nav">
+        <div class="burger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="nav-overlay"></div>
+      <nav class="global-nav">
+        <p class="nav-title">きてみて弥石町</p>
+        <ul class="theme-list">
+          <li>
+            <span class="theme-list-title">弥石町の魅力</span>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../theme/culture.html" class="drop-menu-item">
+                  触れる
+                </a>
+              </li>
+              <li>
+                <a href="../theme/food.html" class="drop-menu-item">味わう</a>
+              </li>
+              <li>
+                <a href="../theme/life.html" class="drop-menu-item">暮らす</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li><a href="#">観光・体験</a></li>
+          <li><a href="../access/access.html">アクセス</a></li>
+        </ul>
+        <div class="info">
+          <p class="company-name">弥石町役場観光部</p>
+          <p>〒000-0000<br />北海道弥石郡弥石町一丁目1-1</p>
+          <p class="tel"><a href="tel:000-1234-5678">TEL: 000-1234-5678</a></p>
+          <a href="../inquiry/inquiry.html" class="nav-inquiry-btn"
+            >お問い合わせはこちら</a
+          >
+        </div>
+        <div class="language-btn">
+          <picture class="pic-default">
+            <source srcset="../img/SVG/globe-eee.svg" media="(width>767px)" />
+            <img src="../img/SVG/globe.svg" alt="標準言語設定アイコン" />
+          </picture>
+          <picture class="pic-scrolled">
+            <img
+              src="../img/SVG/globe-1a4472.svg"
+              alt="スクロール時言語設定アイコン"
+            />
+          </picture>
+          <p>LANGUAGE</p>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumbs">
+        <ol>
+          <li><a href="../index.html">ホーム</a></li>
+          <li>観光・体験一覧</li>
+        </ol>
+      </div>
+      <div class="wrap">
+        <div class="title-box">
+          <h1>観光・体験一覧</h1>
+          <p>
+            多種多様な施設やアクティビティで、弥石町の魅力をたっぷりご堪能ください。
+          </p>
+        </div>
+        <section class="activities">
+          <div class="filter-group">
+            <button class="filter-btn is-active" data-target="all">
+              すべて
+            </button>
+            <button class="filter-btn" data-target="culture">触れる</button>
+            <button class="filter-btn" data-target="food">味わう</button>
+            <button class="filter-btn" data-target="life">暮らす</button>
+            <button class="filter-btn" data-target="activity">体験</button>
+          </div>
+          <ul class="item-grid">
+            <li class="card" data-category="culture food">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/michinoeki.png"
+                    alt="道の駅『サウレカムイ』イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="food-tag">味わう</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">道の駅『サウレカムイ』</p>
+                  <p class="card-description">
+                    弥石の旬が揃う場所。特産の山菜や海産物を堪能できるほか、アイヌ工芸品も豊富に並びます。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="culture life activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/museum.png"
+                    alt="弥石町アイヌ民族博物館イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="life-tag">暮らす</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">弥石町アイヌ民族博物館</p>
+                  <p class="card-description">
+                    貴重な遺物から先人たちの知恵を紐解き、現代に息づくアイヌ文化と精神を深く体感できる施設。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="culture activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/minzoku-isho.jpeg"
+                    alt="アイヌ民族衣装着用体験イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">アイヌ民族衣装着用体験</p>
+                  <p class="card-description">
+                    伝統の文様に守られる特別な瞬間を！美しい刺繍衣装を纏い、先人の精神に触れる体験。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="culture">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/bisekikotan.png"
+                    alt="ビセキコタン遺跡群イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">ビセキコタン遺跡群</p>
+                  <p class="card-description">
+                    「弥石の村」という意味のビセキコタンは、復元されたチセが立ち並ぶ最も規模の大きな集落跡です。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="culture activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/shishu.png"
+                    alt="アイヌ伝統文様刺繍体験イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">アイヌ伝統文様刺繍体験</p>
+                  <p class="card-description">
+                    伝統のアイヌ文様を一針ずつ刻む。心の静寂と、先人たちの温もりに触れる刺繍体験。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="life">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img src="../img/yado.jpg" alt="民宿 ばづやイメージ" />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="life-tag">暮らす</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">民宿 ばづや</p>
+                  <p class="card-description">
+                    アイヌの民芸品に囲まれた温もりの宿。伝統の知恵が息づく空間で、心安らぐひとときを。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="culture food life activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img src="../img/ainu-cuisine.jpg" alt="アイヌ料理イメージ" />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="food-tag">味わう</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">アイヌ料理体験</p>
+                  <p class="card-description">
+                    季節の旬で献立が変わる伝統料理体験。訪れるたび新しい「弥石の味」に出会えます。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="life activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/object.jpg"
+                    alt="弥石町移住支援説明会イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="life-tag">暮らす</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">弥石町移住支援説明会</p>
+                  <p class="card-description">
+                    理想の暮らしを弥石町で。住まいや仕事の相談、手厚い支援制度を詳しくご紹介します。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="food life activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img src="../img/potatoes.jpeg" alt="野菜収穫体験イメージ" />
+                  <div class="category-tags">
+                    <p class="food-tag">味わう</p>
+                    <p class="life-tag">暮らす</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">弥石町特産野菜収穫体験</p>
+                  <p class="card-description">
+                    雄大な大地が育んだ旬の野菜を自分の手で収穫！獲れたてならではの香りと甘みに感動してください。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="food activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/cookies.jpeg"
+                    alt="くりかぼちゃスイーツイメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="food-tag">味わう</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">くりかぼちゃスイーツ教室</p>
+                  <p class="card-description">
+                    弥石町特産の甘いくりかぼちゃを使用して、素材の味を活かした絶品スイーツ作りに挑戦します。
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="food activity">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img
+                    src="../img/theme3.jpg"
+                    alt="乳しぼり&チーズ作り体験イメージ"
+                  />
+                  <div class="category-tags">
+                    <p class="food-tag">味わう</p>
+                    <p class="activity-tag">体験</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">乳しぼり&チーズ作り体験</p>
+                  <p class="card-description">
+                    酪農の町で命の恵みを体感。新鮮な生乳から自分だけのチーズを作る、贅沢なひとときを！
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="card" data-category="culture food">
+              <a href="" class="item-link">
+                <div class="card-img-box">
+                  <img src="../img/shoten.png" alt="山谷商店イメージ" />
+                  <div class="category-tags">
+                    <p class="culture-tag">触れる</p>
+                    <p class="food-tag">味わう</p>
+                  </div>
+                </div>
+                <div class="card-info-box">
+                  <p class="card-title">山谷商店</p>
+                  <p class="card-description">
+                    伝統の刺繍衣装や工芸品が並ぶ老舗。弥石町の文化を暮らしに彩る逸品に出会える店。
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-logo">
+          <a href="../index.html"
+            ><img src="../img/logo1-white.png" alt="弥石町ロゴ"
+          /></a>
+          <p class="footer-title">きてみて弥石町</p>
+        </div>
+        <nav class="footer-nav">
+          <ul class="theme-list">
+            <li>
+              <span class="theme-list-title">弥石町の魅力</span>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../theme/culture.html" class="drop-menu-item"
+                    >触れる</a
+                  >
+                </li>
+                <li>
+                  <a href="../theme/food.html" class="drop-menu-item">味わう</a>
+                </li>
+                <li>
+                  <a href="../theme/life.html" class="drop-menu-item">暮らす</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav-list">
+            <li><a href="#">観光・体験</a></li>
+            <li><a href="../access/access.html">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="info">
+          <p class="company-name">弥石町役場観光部</p>
+          <p>〒000-0000<br />北海道弥石郡弥石町一丁目1-1</p>
+          <p class="tel"><a href="tel:000-1234-5678">TEL: 000-1234-5678</a></p>
+          <a href="../inquiry/inquiry.html" class="nav-inquiry-btn"
+            >お問い合わせはこちら</a
+          >
+        </div>
+        <p class="copy">
+          <small>&copy; 2026 きてみて弥石町 All Rights Reserved.</small>
+        </p>
+      </div>
+    </footer>
+
+    <!-- 問い合わせボタン -->
+    <a href="../inquiry/inquiry.html" class="fixed-inquiry-btn">
+      <div class="icon">
+        <img src="../img/SVG/inquiry.svg" alt="お問い合わせアイコン" />
+      </div>
+      <p>お問い合わせ</p>
+    </a>
+    <!-- top戻るボタン -->
+    <a href="#top" class="to-top-btn">
+      <img src="../img/logo-icon-orange.png" alt="TOPへ戻るボタンアイコン" />
+      <p>TOP</p>
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>
