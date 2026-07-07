@@ -3,31 +3,32 @@ const header = $("header");
 $(function () {
   //スクロール時
   $(function () {
-    // // toTop押下時
-    // let clickedToTop = false; // 自動スクロール中か
-    // $(".to-top-btn").click(function () {
-    //   if (clickedToTop) return;
-    //   clickedToTop = true;
-    //   $(".weather, .to-top-btn, .fixed-inquiry-btn").removeClass("is-visible");
-    //   header.removeClass("is-scrolled");
-    //   $("html, body")
-    //     .stop()
-    //     .animate({ scrollTop: 0 }, 600, "swing")
-    //     .promise()
-    //     .done(function () {
-    //       clickedToTop = false;
-    //       beforePos = 0;
-    //       console.log("top到着、判定再開");
-    //       checkScroll();
-    //     });
-    // });
+    // toTop押下時
+    let clickedToTop = false; // 自動スクロール中か
+    $(".to-top-btn").click(function () {
+      if (clickedToTop) return;
+      clickedToTop = true;
+      if (!document.body.classList.contains("is-under")) {
+        header.removeClass("is-scrolled");
+      }
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: 0 }, 400, "swing")
+        .promise()
+        .done(function () {
+          clickedToTop = false;
+          beforePos = 0;
+          console.log("top到着、判定再開");
+          checkScroll();
+        });
+    });
 
     // スクロール判定
     let beforePos = 0;
     function checkScroll() {
-      const footerHeight = $("footer").length
-        ? $("footer").offset().top
-        : $(document).height();
+      // const footerHeight = $("footer").length
+      //   ? $("footer").offset().top
+      //   : $(document).height();
       const currentPos = $(window).scrollTop();
       let diff = beforePos - currentPos;
       // まず確認
@@ -35,8 +36,8 @@ $(function () {
       //     beforePos = currentPos;
       //     return;
       //   }
-      // 200px以上スクロールしたらクラスを付ける、戻ったら外す
-      if (currentPos > 200) {
+      // 下層ページもしくは200px以上スクロールしたらクラスを付ける、戻ったら外す
+      if (currentPos > 200 || document.body.classList.contains("is-under")) {
         header.addClass("is-scrolled");
       } else {
         header.removeClass("is-scrolled");
@@ -90,37 +91,84 @@ $('a[href^="#"]').on("click", function (e) {
   }
 });
 
-if (document.body.id === "work-detail") {
-  // 1. 作品のデータベース（本来は別ファイルやAPIから取得するイメージです）
+if (document.body.classList.contains("work-detail")) {
   const projectData = {
     // 写真、タイトル、種別、使用スキル、製作期間、実際の作品ページ、詳細
-    "sns-app": {
-      title: "写真共有SNSアプリ",
-      category: "Webアプリケーション / React, Firebase",
+    biseki: {
+      title: "町おこしサイト",
+      category: "WEBサイト（架空・学校課題）",
+      skill: "HTML, CSS, javaScripst",
+      period: "約60時間",
       description:
-        "日常の1コマを気軽にシェアできるモビリティファーストのSNSです。リアルタイムチャット機能を搭載しています。",
+        "架空の町「弥石町」町おこしサイトの依頼書に基づいて、初めてデザインから作成したWEBサイト。年齢層を絞らないシンプルめなデザインを意識。横スクロールリストやjsによるスクロール関連の制御等を自力で実装出来た。",
+      url: "biseki",
+      imgSrcMain: "img/work-biseki-pc.png",
+      imgSrcSP: "img/work-biseki-sp.png",
     },
-    "portfolio-site": {
-      title: "デザイン事務所のコーポレートサイト",
-      category: "Webサイト / HTML, CSS, JavaScript",
+    diner: {
+      title: "ダイナーサイト",
+      category: "WEBサイト（架空）",
+      skill: "HTML, CSS, javaScripst, Illustrator",
+      period: "約36時間",
       description:
-        "視覚的な美しさとアクセシビリティを両立させた、モダンなWebサイトです。アニメーションにこだわりました。",
+        "創業70周年になる架空のアメリカンダイナーのWEBサイト。個人的な好みを盛り込みつつ、レトロな名残がある現代的なポップさを感じられるデザインを意識。言語切替機能、PDF表示の実装、またidによって表示切替できるメニュー商品詳細ページ実装の挑戦を行った。",
+      url: "diner",
+      imgSrcMain: "img/work-diner-pc.png",
+      imgSrcSP: "img/work-diner-sp.png",
+    },
+    hokurei: {
+      title: "花火大会告知LPサイト",
+      category: "LPサイトデザインカンプ（架空・学校課題）",
+      skill: "XD, Illustlator, Photoshop",
+      period: "約40時間",
+      description:
+        "架空の町「北礼町」花火大会告知サイトの依頼書に基づいて初めて作成したLPサイトデザインカンプ。ほどよく落ち着きながらも祭りの賑わいを感じられるデザインを意識。セクションタイトル等に使用した装飾作成において、Illustrator/Photoshopで様々な加工を試す機会になった。",
+      url: "",
+      imgSrcMain: "img/work-hokurei.png",
+      imgSrcSP: "",
+    },
+    ogura: {
+      title: "アーティスト非公式LPファンサイト",
+      category: "LPサイト（架空）",
+      skill: "HTML, CSS, javaScripst",
+      period: "約20時間",
+      description:
+        "クラスメイトがデザインした、アーティスト非公式LPファンサイトのコーディング部分を担当。お心当たりのあるアーティスト様へ：今回の最終課題発表のために作成したため、もちろん本物のポートフォリオからは除去するのでご安心ください。",
+      url: "ogura",
+      imgSrcMain: "img/work-ogura-pc.png",
+      imgSrcSP: "img/work-ogura-sp.png",
     },
   };
-
-  // 2. URLからクエリパラメータ（?id=xxx）を取得する
   const urlParams = new URLSearchParams(window.location.search);
-  const projectId = urlParams.get("id"); // 'sns-app' などが取れる
-  console.log(projectId);
-
-  // 3. 該当するデータを画面に反映する
+  const projectId = urlParams.get("id");
   const project = projectData[projectId];
-
   if (project) {
-    document.getElementById("project-title").textContent = project.title;
-    document.getElementById("project-category").textContent = project.category;
-    document.getElementById("project-description").textContent =
-      project.description;
+    document.getElementById("title").textContent = project.title;
+    document.getElementById("category").textContent = project.category;
+    document.getElementById("skill").textContent = project.skill;
+    document.getElementById("period").textContent = project.period;
+    if (project.url) {
+      document.getElementById("url").classList.remove("is-hidden");
+      document.getElementById("url").href = project.url;
+    } else {
+      document.getElementById("url").classList.add("is-hidden");
+    }
+    document.getElementById("description").textContent = project.description;
+    if (project.imgSrcMain) {
+      document.getElementById("imgMain").classList.remove("is-hidden");
+      document.getElementById("imgMain").src = project.imgSrcMain;
+    } else {
+      document.getElementById("imgMain").classList.add("is-hidden");
+    }
+    if (project.imgSrcSP) {
+      document.getElementById("imgSP").classList.remove("is-hidden");
+      document.getElementById("imgSP").src = project.imgSrcSP;
+    } else {
+      document.getElementById("imgSP").classList.add("is-hidden");
+    }
+    // ページタイトル書き換え
+    const siteName = "portfolio";
+    document.title = `${project.title} | ${siteName}`;
   } else {
     // パラメータが不正、または作品が見つからない場合
     document.getElementById("project-container").innerHTML =

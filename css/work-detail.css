@@ -1,0 +1,75 @@
+@charset "utf-8";
+section {
+  margin: 3vh auto 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.wrap90 {
+  padding: 12vh 0;
+}
+.more-btn {
+  margin-top: 2vh;
+}
+.back-nav {
+  width: 90vw;
+}
+.bg-wrap {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+#title {
+  margin-bottom: 1.5vh;
+  font-size: 30px;
+  line-height: 1.2em;
+}
+#title::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 25px;
+  background: url(../img/tatefuda.png) no-repeat center / contain;
+  margin-right: 6px;
+}
+#category::before {
+  content: "種別：";
+}
+#skill::before {
+  content: "使用スキル：";
+}
+#period::before {
+  content: "製作期間：";
+}
+#description::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 13px;
+  background: url(../img/paper.png) no-repeat center / contain;
+  margin-right: 6px;
+}
+.img-comtainer {
+  width: 100%;
+  position: relative;
+}
+.img-comtainer #imgMain {
+  height: auto;
+  max-height: 400vh;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+.img-comtainer #imgSP {
+  position: absolute;
+  width: 27%;
+  bottom: 0;
+  right: 0;
+}
+#url.is-hidden,
+#imgPC.is-hidden,
+#imgSP.is-hidden {
+  display: none;
+}

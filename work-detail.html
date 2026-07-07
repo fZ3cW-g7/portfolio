@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/work-detail.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +13,8 @@
     />
     <title>portfolio</title>
   </head>
-  <body id="work-detail">
-    <header>
+  <body id="top" class="work-detail is-under">
+    <header class="is-scrolled">
       <div class="logo">
         <a href="index.html">
           <img src="img/svg/logo-yellow-stroke.svg" alt="logo" />
@@ -28,18 +28,53 @@
         </ul>
       </nav>
     </header>
-
-    <a href="index.html">← 一覧に戻る</a>
-
-    <!-- ここがパラメータによって書き換わります -->
     <main id="project-container">
-      <h1 id="project-title">読み込み中...</h1>
-      <p id="project-category"></p>
-      <div id="project-description"></div>
+      <div class="wrap90">
+        <div class="back-nav">
+          <a href="javascript:void(0)">一覧にもどる </a>
+        </div>
+        <section>
+          <h1 id="title">読み込み中...</h1>
+          <div class="bg-wrap">
+            <p id="category"></p>
+            <p id="skill"></p>
+            <p id="period"></p>
+            <div id="description"></div>
+            <a id="url" href="" class="more-btn">みる</a>
+          </div>
+          <div class="img-comtainer">
+            <img id="imgMain" src="" alt="作品イメージ" />
+            <img id="imgSP" src="" alt="作品イメージ" />
+          </div>
+        </section>
+      </div>
     </main>
-    <footer>フッター</footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <footer>
+      <div class="footer-wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/svg/logo-yellow-stroke.svg" alt="logo" />
+          </a>
+        </div>
+        <nav class="global-nav">
+          <ul>
+            <li><a href="#works">works</a></li>
+            <li><a href="#profile">profile</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="copy"><small>&copy;2026 Nao Iwai 603A</small></div>
+    </footer>
+    <!-- topへもどるボタン -->
+    <a href="#top" class="to-top-btn">
+      <div>
+        <img src="img/softcream_milk.png" alt="topへもどるボタン" />
+        <p>TOP</p>
+      </div>
+    </a>
   </body>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>

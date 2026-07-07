@@ -32,6 +32,7 @@ a {
   color: #333;
   text-decoration: none;
   line-height: 1;
+  user-select: none;
 }
 li {
   list-style: none;
@@ -53,11 +54,15 @@ p {
   font-size: 15px;
 }
 section {
-  width: 90vw;
+  width: 100%;
   margin: 0 auto 100px;
 }
+.wrap90 {
+  width: 90vw;
+  margin: 0 auto;
+}
 .bg-wrap {
-  /* width: 100%; */
+  width: 100%;
   margin: 20px auto;
   padding: 40px 20px;
   background-color: #fff;
@@ -77,6 +82,7 @@ h2.section-title {
   -webkit-text-stroke: 1px #000;
   text-stroke: 1px #000;
 }
+/* もっとみるボタン */
 .more-btn {
   width: 90%;
   height: 80px;
@@ -90,13 +96,57 @@ h2.section-title {
   place-items: center;
   transition: all 0.1s ease-in-out;
 }
-.works .more-btn:hover,
+.more-btn:hover,
 section.contact form input[type="submit"]:hover {
   color: #333;
   background-color: #fff;
   border: 2px solid dodgerblue;
   transform: translatey(5px);
   /* transform: scale(1.02); */
+}
+/* topに戻るボタン */
+.to-top-btn {
+  width: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 23px;
+  z-index: 99;
+  transition: all 0.1s;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+}
+.to-top-btn:hover {
+  transform: translateY(3px);
+}
+.to-top-btn div {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 6px;
+}
+.to-top-btn div p {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+/* 下層ページ用もどるボタン */
+.back-nav {
+  width: 85%;
+  margin: 0 auto;
+}
+.back-nav a {
+  display: inline-block;
+  transition: all 0.1s;
+}
+.back-nav a::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background: url(../img/yajirushi_left.png) no-repeat center / contain;
+  margin-right: 6px;
+}
+.back-nav a:hover {
+  transform: translateX(-3px);
 }
 @media (width>767px) {
   section {
@@ -105,6 +155,9 @@ section.contact form input[type="submit"]:hover {
   }
   .more-btn {
     width: 30%;
+  }
+  .to-top-btn {
+    /* width: 90px; */
   }
 }
 
@@ -211,7 +264,8 @@ footer {
   padding: 20px 0;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
 }
 footer .logo {
   width: 35%;
@@ -219,9 +273,12 @@ footer .logo {
 footer .global-nav ul {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+footer .global-nav ul li a:hover {
+  transform: translateY(2px);
 }
 footer .global-nav ul li a {
-  /* dz: 16px; */
   color: transparent;
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
@@ -238,4 +295,10 @@ footer .copy {
   text-align: center;
 }
 @media (width>767px) {
+  .footer-wrap {
+    gap: 40px;
+  }
+  footer .logo {
+    width: 200px;
+  }
 }

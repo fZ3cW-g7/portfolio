@@ -139,19 +139,40 @@
   width: 100%;
   height: 100%;
   padding: 1vh;
-  color: #fff;
-  mix-blend-mode: difference;
+  color: #000;
+  /* mix-blend-mode: difference; */
   display: grid;
   place-items: center;
   opacity: 0;
   transition: all 0.1s;
 }
 .profile .favourites ul li:hover p {
-  background-color: rgb(51, 51, 51, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   opacity: 1;
 }
 .profile .favourites ul li.fav-item1 .img-bg {
-  background: url(../img/work-biseki-pc.png) no-repeat center / contain;
+  background: url(../img/inuyamajo.jpg) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item2 .img-bg {
+  background: url(../img/amicake.jpg) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item3 .img-bg {
+  background: url(../img/liverpool.JPG) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item4 .img-bg {
+  background: url(../img/bakerstreet.JPG) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item5 .img-bg {
+  background: url(../img/christmas-market.JPG) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item6 .img-bg {
+  background: url(../img/disney.JPG) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item7 .img-bg {
+  background: url(../img/senpuki.JPG) no-repeat center / contain;
+}
+.profile .favourites ul li.fav-item8 .img-bg {
+  background: url(../img/train.JPG) no-repeat center / contain;
 }
 @media (width>767px) {
   .profile .favourites ul {
