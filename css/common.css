@@ -106,7 +106,7 @@ section.contact form input[type="submit"]:hover {
 }
 /* topに戻るボタン */
 .to-top-btn {
-  width: 40px;
+  width: 8vw;
   position: fixed;
   bottom: 20px;
   right: 23px;
@@ -157,7 +157,7 @@ section.contact form input[type="submit"]:hover {
     width: 30%;
   }
   .to-top-btn {
-    /* width: 90px; */
+    width: 40px;
   }
 }
 

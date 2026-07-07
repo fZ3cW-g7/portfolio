@@ -126,7 +126,7 @@
   gap: 1vh;
 }
 .profile .favourites ul li {
-  padding: 1vh;
+  padding: 0.5vh;
   aspect-ratio: 4/3;
   background-color: greenyellow;
   transition: all 0.1s;
@@ -178,6 +178,9 @@
   .profile .favourites ul {
     grid-template-columns: repeat(4, 1fr);
     gap: 2vh;
+  }
+  .profile .favourites ul li {
+    padding: 1vh;
   }
   .profile .favourites ul li p {
     padding: 15px;
