@@ -138,6 +138,16 @@ if (document.body.classList.contains("work-detail")) {
       imgSrcMain: "img/work-ogura-pc.png",
       imgSrcSP: "img/work-ogura-sp.png",
     },
+    card: {
+      title: "名刺デザイン",
+      category: "名刺（学校課題）",
+      skill: "Illustlator",
+      period: "約20時間",
+      description: "Illustrator課題で制作",
+      url: "",
+      imgSrcMain: "img/work-card.jpg",
+      imgSrcSP: "",
+    },
   };
   const urlParams = new URLSearchParams(window.location.search);
   const projectId = urlParams.get("id");

@@ -58,7 +58,7 @@ section {
 .img-comtainer #imgMain {
   height: auto;
   max-height: 400vh;
-  width: 100%;
+  width: 95%;
   display: block;
   object-fit: contain;
 }

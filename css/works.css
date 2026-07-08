@@ -1,0 +1,27 @@
+@charset "utf-8";
+section {
+  margin: 3vh auto 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.wrap90 {
+  padding: 12vh 0;
+}
+.works-list {
+  margin-right: 0;
+  margin-left: 0;
+}
+h1.section-title {
+  width: fit-content;
+  padding: 5px 50px 5px 20px;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: transparent;
+  background-color: rgb(255, 52, 146, 0.8);
+  border-left: 15px solid rgb(227, 47, 92);
+  text-shadow: 0 0 0 rgb(255, 255, 255, 0.9);
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+}
