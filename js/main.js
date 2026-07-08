@@ -117,7 +117,7 @@ if (document.body.classList.contains("work-detail")) {
       imgSrcSP: "img/work-diner-sp.png",
     },
     hokurei: {
-      title: "花火大会告知LPサイト",
+      title: "花火大会告知LPサイトデザイン",
       category: "LPサイトデザインカンプ（架空・学校課題）",
       skill: "XD, Illustlator, Photoshop",
       period: "約40時間",
