@@ -14,8 +14,8 @@
   </head>
   <body id="top">
     <div id="wrapper">
+      <img class="pc-bg" src="img/main-bg.png" alt="pc background" />
       <div class="wrap-bg">
-        <img class="pc-bg" src="img/main-bg.png" alt="pc background" />
         <header>
           <div class="nav-wrap">
             <div class="sp-header">
@@ -26,7 +26,10 @@
               </div>
               <h1>OGURA</h1>
               <div class="burger-btn">
-                <img src="img/burger-btn-closed@2x.png" alt="burger button" />
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cancer.png" />
+                  <img src="img/burger-btn-closed@2x.png" alt="burger button" />
+                </picture>
               </div>
             </div>
             <div class="nav-overlay"></div>
@@ -35,7 +38,7 @@
                 <li>
                   <a href="#artwork">Ogura's<br />Latest Artwork</a>
                 </li>
-                <li><a href="#line-stamp">LINEstamp</a></li>
+                <li><a href="#line-stamp">LINE Stamp</a></li>
                 <li><a href="#suzuri">SUZURI</a></li>
                 <li><a href="#who-is">WHO is?</a></li>
               </ul>
@@ -43,7 +46,7 @@
                 <li>
                   <div class="btns">
                     <div class="btn">
-                      <a href="btn.com" target="_blank">Get LINEstamps</a>
+                      <a href="btn.com" target="_blank">Get LINE Stamps</a>
                     </div>
                   </div>
                 </li>
@@ -59,7 +62,7 @@
           </div>
         </header>
         <main>
-          <div class="mv">
+          <div id="mv" class="mv">
             <div class="mv-bg"></div>
             <div class="wrap90">
               <p class="catch">
@@ -84,17 +87,27 @@
             <section class="artwork" id="artwork">
               <h2 class="section-title">Ogura's<br />Latest Artwork</h2>
               <div class="wrap80">
-                <div class="frame">
-                  <img src="img/gorira@2x@2x.png" alt="" />
+                <div class="carousel-container">
+                  <ul class="carousel-track">
+                    <li class="carousel-slide">
+                      <img src="img/gorira@2x@2x.png" alt="gorilla" />
+                    </li>
+                    <li class="carousel-slide">
+                      <img src="img/mejed@2x.png" alt="mejed" />
+                    </li>
+                    <li class="carousel-slide">
+                      <img src="img/rocket-to-top.webp" alt="rocket" />
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="detail">
-                <img src="img/mejed@2x.png" alt="" />
-                <p class="text">2026.06.17</p>
+                <img src="img/mejed-new.png" alt="mejed" />
+                <p class="text">2026.07.09</p>
               </div>
             </section>
             <section class="line-stamp" id="line-stamp">
-              <h2 class="section-title">LINEstamp</h2>
+              <h2 class="section-title">LINE Stamp</h2>
               <div class="wrap80">
                 <div class="carousel-container">
                   <ul class="carousel-track">
@@ -114,7 +127,7 @@
                 </div>
                 <div class="btns">
                   <div class="btn">
-                    <a href="btn.com" target="_blank">Get LINEstamps</a>
+                    <a href="btn.com" target="_blank">Get LINE Stamps</a>
                   </div>
                 </div>
               </div>
@@ -150,7 +163,9 @@
                     Specimen Name:<br />
                     OGURA Keidai
                   </p>
-                  <p class="add-small jp">個体名：オグラ ケイダイ</p>
+                  <p class="add-small jp">
+                    個体名：オグラ ケイダ<span class="last-letter">イ</span>
+                  </p>
                   <p class="detail">Kingdom: Animalia</p>
                   <p class="detail">Phylum: Chordata</p>
                   <p class="detail">Class: Mammalia</p>
@@ -159,7 +174,10 @@
                   <p class="detail">Genus: Homo</p>
                   <p class="detail">Species: H. sapiens</p>
                   <p class="add-small jp">
-                    動物界 脊椎動物門 哺乳綱 霊長目 ヒト科 ヒト属 サピエンス
+                    動物界 脊椎動物門 哺乳綱 霊長目 ヒト科 ヒト属 サピエン<span
+                      class="last-letter"
+                      >ス</span
+                    >
                   </p>
                   <div class="portrait hidden-gem-trigger"></div>
                   <p class="add-small en">
@@ -167,9 +185,14 @@
                     Currently under investigation.
                   </p>
                   <p class="add-small jp">
-                    これが被験者（本人）であるという決定的な証拠はない。
+                    これが被験者（本人）であるという決定的な証拠はない<span
+                      class="last-letter"
+                      >。</span
+                    >
                   </p>
-                  <p class="add-small jp">現在調査中。</p>
+                  <p class="add-small jp">
+                    現在調査中<span class="last-letter">。</span>
+                  </p>
                 </div>
               </div>
             </section>
@@ -185,7 +208,7 @@
         </footer>
       </div>
       <!-- top戻るボタン -->
-      <a href="#top" class="to-top-btn">
+      <a href="#top" id="to-top-btn" class="to-top-btn">
         <div>
           <img src="img/rocket-to-top.webp" alt="to top button" />
           <p>TOP</p>

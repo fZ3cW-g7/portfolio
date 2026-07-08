@@ -59,10 +59,14 @@ li {
   margin: 0 auto;
   container-type: inline-size;
   container-name: phone-screen;
-  background: url(../img/milkyway.jpg) repeat-y center/cover;
+  background: url(../img/bg-milkyway.jpg) repeat-y center/cover;
   background-size: 200vh;
+  position: relative;
 }
-.wrap-bg .pc-bg {
+.wrapper {
+  position: relative;
+}
+.pc-bg {
   height: 100vh;
   position: absolute;
   top: 0;
@@ -160,18 +164,23 @@ ul.carousel-track {
   padding: 0 5%;
 }
 li.carousel-slide {
+  position: relative;
   width: 100%;
   border: 2.5px solid #c0a579;
   flex: 0 0 100%;
   scroll-snap-align: center;
-  display: grid;
-  place-items: center;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
 }
 .carousel-slide img {
+  padding: 5%;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /* topに戻るボタン */
 .to-top-btn {
@@ -183,10 +192,18 @@ li.carousel-slide {
   z-index: 99;
   transition: all 0.2s;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   @media (max-width: 766px) {
     left: auto;
     right: 10px;
   }
+}
+.to-top-btn.is-shown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .to-top-btn:hover {
   transform: translateY(3px);
@@ -206,12 +223,14 @@ li.carousel-slide {
   .carousel-container {
     max-width: 375px;
   }
+  .wrap-bg {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  }
   .to-top-btn {
     left: calc(50% + (375px / 2) - 55px);
   }
-  body {
-  }
-  .wrap-bg .pc-bg {
+  .pc-bg {
     position: fixed;
     display: block;
   }
@@ -327,9 +346,6 @@ body:has(.burger-btn.active) {
   header {
     max-width: 375px;
   }
-  .burger-btn {
-    visibility: hidden;
-  }
   .global-nav {
     display: contents;
   }
@@ -344,6 +360,18 @@ body:has(.burger-btn.active) {
     top: 50%;
     left: calc((50vw - (375px / 2)) * 0.5);
     right: auto;
+  }
+  .global-nav ul:first-child::before {
+    content: "";
+    position: absolute;
+    padding: 30px;
+    top: 50%;
+    left: -50%;
+    transform: translateY(-50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(25, 40, 91, 0.3);
+    filter: blur(6px);
   }
   .global-nav ul:last-child {
     width: 24%;
@@ -428,14 +456,6 @@ footer p {
 section.artwork {
   position: relative;
 }
-section.artwork .frame {
-  aspect-ratio: 1/1;
-}
-section.artwork .frame img {
-  width: 100%;
-  /* height: min-content; */
-  padding: 8%;
-}
 section.artwork .detail {
   height: 7vh;
 }
@@ -446,11 +466,16 @@ section.artwork .detail img {
   bottom: 0;
 }
 section.artwork .detail .text {
+  padding: 4px 0;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
   color: #fff;
   background: url(../img/fukidashi@2x.png) no-repeat center/contain;
+  /* background-image: url(../img/fukidashi@2x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% 100%; */
   position: relative;
   transform-style: preserve-3d;
   z-index: 1;
@@ -458,22 +483,22 @@ section.artwork .detail .text {
 section.artwork .detail .text::after {
   content: "";
   display: inline-block;
-  width: 180px;
-  height: 21px;
+  width: 250px;
+  height: 30px;
   background-color: #000;
   border-radius: 3px;
   position: absolute;
   left: 50%;
-  top: 69%;
+  top: 60%;
   transform: translateZ(-1px) translate(-50%, -50%);
+}
+section.artwork li.carousel-slide {
+  background-color: #231815;
 }
 
 /* linestamp */
 section.line-stamp li.carousel-slide {
   background-color: #fdffed;
-}
-section.line-stamp li.carousel-slide img {
-  padding: 5%;
 }
 
 /* suzuri */
@@ -484,11 +509,9 @@ section.suzuri li.carousel-slide::after {
   content: "\0a5 99,999-";
   padding: 3px 5px;
   background-color: #c0a579;
-  margin-left: auto;
-  margin-bottom: -1px;
-}
-section.suzuri li.carousel-slide img {
-  padding: 3%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* who-is */
@@ -497,7 +520,6 @@ section.who-is .frame {
   flex-direction: column;
   gap: 5px;
 }
-
 section.who-is .frame p {
   width: 100%;
   font-family: "Doto", sans-serif;
@@ -518,12 +540,22 @@ section.who-is .frame p.add-small.jp {
   font-family: "Meiryo UI", sans-serif;
   font-weight: 400;
   color: #fff;
+  /* white-space: nowrap;
+  display: inline-block;
+  transform: scaleX(0.9);
+  transform-origin: left center; */
+}
+span.last-letter {
+  display: inline-block;
+  white-space: nowrap; /* これで中の文字とafterが絶対に泣き別れしません */
 }
 section.who-is .frame p.add-small.jp::before {
   content: "(";
 }
-section.who-is .frame p.add-small.jp::after {
+section.who-is .frame p.add-small.jp span.last-letter::after {
   content: ")";
+  display: inline-block;
+  margin-left: 0.3em;
 }
 section.who-is .frame p.add-small.en {
   font-size: 12px;

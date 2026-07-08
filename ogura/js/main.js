@@ -28,20 +28,6 @@ $(function () {
       scrollToTarget($target);
       return false;
     });
-  //   $('a[href^="#"]').on("click", function () {
-  //     const href = $(this).attr("href");
-  //     const $target = $(href === "#" || href === "" ? "html" : href);
-
-  //     scrollToTarget($target);
-  //     return false; // ページ遷移（デフォルト挙動）をキャンセル
-  //   });
-
-  //   toTop.on("click", function () {
-  //     const href = $(this).attr("href");
-  //     const $target = $(href === "#" || href === "" ? "html" : href);
-  //     scrollToTarget($target);
-  //     return false; // ページ遷移（デフォルト挙動）をキャンセル
-  //   });
 
   // ナビゲーション移動
   function moveNavigation() {
@@ -60,6 +46,22 @@ $(function () {
   }
   moveNavigation();
   $(window).on("resize", moveNavigation);
+
+  // to topボタン表示制御
+  window.addEventListener("scroll", function () {
+    const toTopBtn = document.getElementById("to-top-btn");
+    const mainVisual = document.getElementById("mv");
+    if (toTopBtn && mainVisual) {
+      const mainVisualHeight = mainVisual.offsetHeight;
+      const currentScroll =
+        window.scrollY || document.documentElement.scrollTop;
+      if (currentScroll > mainVisualHeight) {
+        toTopBtn.classList.add("is-shown");
+      } else {
+        toTopBtn.classList.remove("is-shown");
+      }
+    }
+  });
 });
 
 // sp burger menu
@@ -91,7 +93,6 @@ const wrapper = $("#wrapper");
 const hiddenTrigger = $(".hidden-gem-trigger");
 const hiddenGem = $("#hidden-gem");
 let clickCount = 0;
-// let originalContent = "";
 hiddenTrigger.on("click", function () {
   clickCount++;
   console.log("隠しコマンドまであと: " + (3 - clickCount) + "回");
