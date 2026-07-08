@@ -366,9 +366,9 @@ body:has(.burger-btn.active) {
     position: absolute;
     padding: 30px;
     top: 50%;
-    left: -50%;
+    left: -50vw;
     transform: translateY(-50%);
-    width: 100vw;
+    width: 200vw;
     height: 100vh;
     background-color: rgba(25, 40, 91, 0.3);
     filter: blur(6px);
